@@ -53,20 +53,16 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.ibRegularService:
                 percentage = REGULAR_TIP_PERCENTAGE;
-                calculateFinalBill();
-                setTipValues();
                 break;
             case R.id.ibGoodService:
                 percentage = DEFAULT_TIP_PERCENTAGE;
-                calculateFinalBill();
-                setTipValues();
                 break;
             case R.id.ibExcelentService:
                 percentage = EXCELENT_TIP_PERCENTAGE;
-                calculateFinalBill();
-                setTipValues();
                 break;
         }
+        calculateFinalBill();
+        setTipValues();
     }
 
     @OnTextChanged(R.id.etBillAmount)
